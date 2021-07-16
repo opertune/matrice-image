@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1585753304 source:c:\projet\devoir2\main.cpp
+	<iostream>
+	<myconio.h>
+

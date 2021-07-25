@@ -1,7 +1,5 @@
 /* Devoir 2
-* Saisir une matrice qui permet d’afficher une image
-* Date : 31/03/2020
-* Author : Baucheron Romain
+* Saisir une matrice qui permet dâ€™afficher une image
 */
 
 #include <iostream>
@@ -12,10 +10,10 @@ using namespace std;
 // Constante de la taille de la matrice
 #define N 10
 
-// Valeur des 4 couleurs : blanc, gris clair, gris foncé et noir
+// Valeur des 4 couleurs : blanc, gris clair, gris foncÃ© et noir
 int couleur[4] = {15, 7, 8, 0};
 
-// Module permettant de réaliser une saisie contrôlée
+// Module permettant de rÃ©aliser une saisie contrÃ´lÃ©e
 int saisie(int x, int y){
     int val;
     do{
@@ -28,7 +26,7 @@ int saisie(int x, int y){
 // Module permettant d'afficher les points et de saisie la matrice
 void saisieMatrice(int image[N][N]){
     gotoxy(1, 1); cout << "Sasie de la matrice (valeurs 0 blanc, 1 gris clair, 2 gris fonc\x82 ou 3 noir) : ";
-    // Affichage des points pour montrer où se fait la saisie
+    // Affichage des points pour montrer oÃ¹ se fait la saisie
     for(int x = 0; x<N; x++){
         for(int y=0; y<N; y++){
             gotoxy(x*3+1, y+2); cout << ".";
@@ -42,9 +40,9 @@ void saisieMatrice(int image[N][N]){
     }
 }
 
-// Fonction qui retourne la valeur de la luminosité
+// Fonction qui retourne la valeur de la luminositÃ©
 int calculLuminosite(int image[N][N]){
-    // Initialisation à 0 de la luminosité
+    // Initialisation Ã  0 de la luminositÃ©
     int luminosite = 0;
     // Calcul de la somme du contenu de la matrice
     for(int i=0; i<N; i++){
@@ -71,7 +69,7 @@ void afficheImage(int image[N][N], int x){
 
 // Procedure qui accentue le constrate de l'image
 void accentueContraste(int image[N][N]){
-    // Récuperation de la luminosité de base
+    // RÃ©cuperation de la luminositÃ© de base
     int luminosite = calculLuminosite(image);
     // Augmente ou diminue la luminosite en fonction de la valeur de base
     for(int i=0; i<N; i++){
@@ -89,7 +87,7 @@ void accentueContraste(int image[N][N]){
 
 int main()
 {
-    // Déclaration
+    // DÃ©claration
     int image[N][N];
     // Saisie de la matrice d'origine
     saisieMatrice(image);
